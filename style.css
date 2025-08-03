@@ -26,17 +26,7 @@ body {
   overflow: hidden;
 }
 
-/* Animated Music Notes Background */
-.floating-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  pointer-events: none;
-}
-
+/* Animated Music Notes */
 .music-symbol {
   position: absolute;
   font-size: 40px;
@@ -47,15 +37,9 @@ body {
 }
 
 @keyframes floatSymbols {
-  0% {
-    transform: translateY(0) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-100vh) rotate(180deg);
-  }
-  100% {
-    transform: translateY(0) rotate(360deg);
-  }
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-100vh) rotate(180deg); }
+  100% { transform: translateY(0) rotate(360deg); }
 }
 
 /* Search Bar */
@@ -81,7 +65,6 @@ header input {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 15px;
   width: 100%;
   max-width: 1000px;
@@ -115,7 +98,7 @@ header input {
   cursor: pointer;
 }
 
-/* Thin Progress Bar */
+/* Progress Bar */
 .progress-container {
   display: flex;
   justify-content: space-between;
@@ -151,7 +134,6 @@ header input {
 .carousel {
   display: flex;
   justify-content: space-around;
-  align-items: center;
   gap: 10px;
   overflow-x: auto;
 }

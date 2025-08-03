@@ -16,13 +16,13 @@ const carousel = document.querySelector('.carousel');
 let songIndex = 0;
 
 const songList = [
-    { title: "Rise Of Dragon", artist: "Leon James", src: "songs/Rise Of Dragon.mp3", img: "images/img1.jfif" },
+    { title: "Rise Of Dragon", artist: "Leon James", src: "songs/Rise_Of_Dragon.mp3", img: "images/img1.jfif" },
     { title: "Jinguchaa", artist: "A.R.Rahman", src: "songs/Jinguchaa.mp3", img: "images/img2.jfif" },
-    { title: "Hey Minnale", artist: "G.V. Prakash Kumar", src: "songs/Hey Minnale.mp3", img: "images/img3.jfif" },
+    { title: "Hey Minnale", artist: "G.V. Prakash Kumar", src: "songs/Hey_Minnale.mp3", img: "images/img3.jfif" },
     { title: "Sawadeeka", artist: "Various", src: "songs/Sawadeeka.mp3", img: "images/img4.jfif" },
-    { title: "Kutty Pattas", artist: "Various", src: "songs/Kutty-Pattas-MassTamilan.fm.mp3", img: "images/img5.jfif" },
+    { title: "Kutty Pattas", artist: "Various", src: "songs/Kutty_Pattas_MassTamilan.mp3", img: "images/img5.jfif" },
     { title: "Paththavaikkum", artist: "Various", src: "songs/Paththavaikkum.mp3", img: "images/img6.jfif" },
-    { title: "Golden Sparrow", artist: "Various", src: "songs/Golden Sparrow.mp3", img: "images/img7.jfif" }
+    { title: "Golden Sparrow", artist: "Various", src: "songs/Golden_Sparrow.mp3", img: "images/img7.jfif" }
 ];
 
 function loadSong(index) {
@@ -103,6 +103,7 @@ songs.forEach((songDiv, index) => {
     });
 });
 
+// Auto Scroll Playlist
 let scrollSpeed = 1;
 function autoScrollCarousel() {
     carousel.scrollLeft += scrollSpeed;
@@ -114,6 +115,8 @@ function autoScrollCarousel() {
     requestAnimationFrame(autoScrollCarousel);
 }
 autoScrollCarousel();
+
+// Animated Music Symbols
 const background = document.querySelector('.floating-background');
 const symbols = ['🎵', '🎶', '♫', '🎼'];
 
@@ -127,6 +130,5 @@ for (let i = 0; i < 40; i++) {
   note.style.animationDuration = (10 + Math.random() * 20) + 's';
   background.appendChild(note);
 }
-
 
 loadSong(songIndex);
